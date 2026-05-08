@@ -1,5 +1,5 @@
-import ContactForm from "./components/Contact-form-components/ContactForm";
-import PlanetList from "./components/Planet-cards-components/PlanetList";
+import ContactForm from "./components/ContactForm";
+import PlanetList from "./components/PlanetList";
 
 function App() {
   return (
