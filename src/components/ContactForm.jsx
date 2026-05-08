@@ -1,5 +1,3 @@
-// src/components/ContactForm.jsx
-
 import { useState } from "react";
 import "./ContactForm.css";
 
@@ -16,9 +14,6 @@ const ContactForm = () => {
 
   const [errors, setErrors] = useState({});
 
-  // =========================
-  // Validation
-  // =========================
   const validate = () => {
     const newErrors = {};
 
@@ -49,9 +44,7 @@ const ContactForm = () => {
     return Object.keys(newErrors).length === 0;
   };
 
-  // =========================
-  // Handlers
-  // =========================
+ 
   const handleChange = (e) => {
     const { name, value } = e.target;
 
