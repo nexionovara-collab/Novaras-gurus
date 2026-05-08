@@ -1,10 +1,10 @@
-import ContactForm from "./components/ContactForm";
+import ContactForm from "./components/Contact-form-components/ContactForm";
+import PlanetList from "./components/Planet-cards-components/PlanetList";
 
 function App() {
   return (
-    <div>
-      <h1>Novaras Gurus Capstone</h1>
-
+    <div className="min-h-screen">
+      <PlanetList />
       <ContactForm />
     </div>
   );
