@@ -1,0 +1,132 @@
+.navbar {
+  background: #0d1b3e;
+  width: 100%;
+  position: relative;
+  z-index: 100;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.navbar__inner {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 60px;
+  height: 72px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Logo */
+.navbar__logo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  flex-shrink: 0;
+}
+
+.navbar__logo-img {
+  height: 44px;
+  width: auto;
+  display: block;
+  /* Logo PNG has white/light design — invert since it appears dark on white bg */
+  filter: brightness(0) invert(1);
+}
+
+/* Desktop nav links */
+.navbar__links {
+  display: flex;
+  align-items: center;
+  gap: 36px;
+}
+
+.navbar__links a {
+  color: rgba(255, 255, 255, 0.78);
+  text-decoration: none;
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 0.01em;
+  transition: color 0.2s;
+  white-space: nowrap;
+}
+
+.navbar__links a:hover {
+  color: #ffffff;
+}
+
+/* Hamburger — hidden on desktop */
+.navbar__hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  width: 36px;
+  height: 36px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+}
+
+.navbar__hamburger span {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background: #ffffff;
+  border-radius: 2px;
+  transition: transform 0.25s, opacity 0.25s;
+}
+
+.navbar__hamburger.open span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+.navbar__hamburger.open span:nth-child(2) {
+  opacity: 0;
+}
+.navbar__hamburger.open span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+/* Mobile menu */
+.navbar__mobile-menu {
+  display: flex;
+  flex-direction: column;
+  background: #0d1b3e;
+  padding: 12px 24px 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.navbar__mobile-menu a {
+  color: rgba(255, 255, 255, 0.82);
+  text-decoration: none;
+  font-size: 15px;
+  font-family: 'Inter', sans-serif;
+  padding: 12px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+  transition: color 0.2s;
+}
+
+.navbar__mobile-menu a:last-child {
+  border-bottom: none;
+}
+
+.navbar__mobile-menu a:hover {
+  color: #ffffff;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .navbar__inner {
+    padding: 0 24px;
+    height: 64px;
+  }
+
+  .navbar__links {
+    display: none;
+  }
+
+  .navbar__hamburger {
+    display: flex;
+  }
+}
