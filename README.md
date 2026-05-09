@@ -4,9 +4,11 @@ A collaborative React web application built for the TS Academy Capstone. This pr
 
 ## Team Members
 * Team Lead: Adjoto-Sodiq Riskiyat Adejumoke (@adjotoriskiyat-hash)
-* Assistant Lead: [Name] (@username)
-* Member A: [Name] (@username)
-* [Add the rest of the team here...]
+* Assistant Lead: Abiola Nurudeen Olatunji (@HarbeahorlarBerry) (@nexioevida-main)
+* Member A: Yunusa Zekeri (@Zekjnr)
+* Member B: Chinemerem Harbor (@Kennharbor)
+* Member C: Ahmed Ibrahim Prosper (@fretdev)
+* Member D: Yashim Nathan (@Explayne)
 
 ## How to Run Locally
 1. Clone the repository
