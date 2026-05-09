@@ -1,0 +1,137 @@
+/* PlanetaryDataSection.css */
+
+.planetary-data-section {
+  width: 100%;
+  height:757px;
+  padding: 80px 20px;
+  background-color: #f5f7fa;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.section-container {
+  width: 100%;
+  max-width: 1200px;
+}
+
+/* MAIN FLEX LAYOUT */
+
+.content-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 60px;
+}
+
+/* IMAGE SECTION */
+
+.video-container {
+  position: relative;
+  flex: 1;
+  max-width: 500px;
+
+  border-radius: 24px;
+  overflow: hidden;
+
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.18);
+}
+
+.data-image {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+/* PLAY BUTTON */
+
+.play-button {
+  position: absolute;
+  inset: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.play-icon {
+  width: 85px;
+  height: 85px;
+
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 2rem;
+  cursor: pointer;
+
+  transition: transform 0.3s ease;
+}
+
+.play-icon:hover {
+  transform: scale(1.08);
+}
+
+/* TEXT SECTION */
+
+.written-content {
+  flex: 1;
+}
+
+.section-title {
+  font-size: 2.3rem;
+  line-height: 1.3;
+  font-weight: 700;
+  color: #173b6b;
+  text-align:center;
+  margin-bottom: 24px;
+}
+
+.section-subtitle {
+  font-size: 1rem;
+  line-height: 1.9;
+  color: #5f6b7a;
+  text-align:center;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 900px) {
+  .content-wrapper {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .video-container {
+    max-width: 100%;
+  }
+
+  .section-title {
+    font-size: 1.9rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .planetary-data-section {
+    padding: 60px 16px;
+  }
+
+  .section-title {
+    font-size: 1.5rem;
+  }
+
+  .section-subtitle {
+    font-size: 0.95rem;
+    line-height: 1.7;
+  }
+
+  .play-icon {
+    width: 65px;
+    height: 65px;
+    font-size: 1.5rem;
+  }
+}
