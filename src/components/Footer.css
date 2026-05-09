@@ -1,0 +1,41 @@
+/* src/components/Footer.css */
+
+@import "tailwindcss";
+
+@layer components {
+  .footer-section {
+    @apply bg-[#02144d] text-white py-24 px-8;
+  }
+
+  .footer-container {
+    @apply max-w-6xl mx-auto;
+  }
+
+  .footer-top {
+    @apply mb-14;
+  }
+
+  .footer-title {
+    @apply text-4xl font-bold mb-6;
+  }
+
+  .footer-text {
+    @apply text-2xl text-white/90;
+  }
+
+  .footer-line {
+    @apply border-t border-white/30 mb-10;
+  }
+
+  .footer-bottom {
+    @apply flex flex-col md:flex-row items-start md:items-center justify-between gap-8;
+  }
+
+  .footer-copy {
+    @apply text-xl text-white font-medium leading-relaxed;
+  }
+
+  .footer-brand {
+    @apply text-3xl font-bold;
+  }
+}
