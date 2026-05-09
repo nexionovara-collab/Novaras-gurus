@@ -4,8 +4,8 @@ A collaborative React web application built for the TS Academy Capstone. This pr
 
 ## Team Members
 * Team Lead: Adjoto-Sodiq Riskiyat Adejumoke (@adjotoriskiyat-hash)
-* Assistant Lead: [Name] (@username)
-* Member A: [Name] (@username)
+* Assistant Lead: Abiola Nurudeen Olatunji (@HarbeahorlarBerry)
+* Member A: [Name] (@fretdev)
 * [Add the rest of the team here...]
 
 ## How to Run Locally
