@@ -1,6 +1,7 @@
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import PlanetList from "./components/PlanetList";
+import PlanetaryFacts from "./components/PlanetaryFacts";
 import ContactForm from "./components/ContactForm";
 
 function App() {
@@ -10,6 +11,9 @@ function App() {
       <Hero />
       <div id="data">
         <PlanetList />
+      </div>
+      <div id="facts">
+        <PlanetaryFacts />
       </div>
       <div id="contact">
         <ContactForm />
