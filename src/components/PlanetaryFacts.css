@@ -1,0 +1,90 @@
+/* src/components/PlanetaryFacts.css */
+
+@import "tailwindcss";
+
+@layer components {
+  .facts-section {
+    @apply max-w-7xl mx-auto px-8 py-20 bg-white;
+  }
+
+  .facts-title {
+    @apply text-[#1f4fb8] text-5xl font-bold mb-4;
+  }
+
+  .facts-description {
+    @apply text-gray-700 text-lg leading-relaxed max-w-4xl mb-12;
+  }
+
+  .facts-subtitle {
+    @apply text-gray-800 font-semibold text-lg mb-6;
+  }
+
+  /* TABLE WRAPPER */
+  .table-wrapper {
+    @apply overflow-hidden rounded-3xl bg-white p-[2px];
+  }
+
+  /* TABLE */
+  .planet-table {
+    @apply w-full border-separate border-spacing-[3px] bg-white rounded-3xl;
+  }
+
+  /* HEADER */
+  .planet-table thead tr {
+    @apply bg-transparent;
+  }
+
+  .planet-table th {
+    @apply bg-[#1f4fb8]
+           text-white
+           text-xl
+           font-semibold
+           text-center
+           py-7
+           px-5;
+  }
+
+  /* BODY CELLS */
+  .planet-table td {
+    @apply bg-[#edf2f8]
+           text-center
+           text-gray-900
+           text-xl
+           py-10
+           px-6;
+  }
+
+  /* CATEGORY CELLS */
+  .category-cell {
+    @apply bg-[#dbe6f7]
+           font-bold
+           text-gray-900
+           align-middle
+           text-2xl;
+  }
+
+  .sub-category {
+    @apply bg-[#dbe6f7]
+           font-bold
+           text-gray-900
+           align-middle
+           text-xl;
+  }
+
+  /* ROUNDED CORNERS */
+  .planet-table thead tr th:first-child {
+    @apply rounded-tl-3xl;
+  }
+
+  .planet-table thead tr th:last-child {
+    @apply rounded-tr-3xl;
+  }
+
+  .planet-table tbody tr:last-child td:first-child {
+    @apply rounded-bl-3xl;
+  }
+
+  .planet-table tbody tr:last-child td:last-child {
+    @apply rounded-br-3xl;
+  }
+}
