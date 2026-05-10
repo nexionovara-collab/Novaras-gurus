@@ -2,6 +2,7 @@
 
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
+import PlanetaryDataSection from "./components/PlanetaryDataSection";
 import PlanetList from "./components/PlanetList";
 import PlanetaryFacts from "./components/PlanetaryFacts";
 import ContactForm from "./components/ContactForm";
@@ -15,9 +16,10 @@ function App() {
 
       {/* Hero Section */}
       <Hero />
-
+      <PlanetaryDataSection />
       {/* Planet Cards */}
       <section id="data">
+        
         <PlanetList />
       </section>
 
