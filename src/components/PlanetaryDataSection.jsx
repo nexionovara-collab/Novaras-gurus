@@ -6,16 +6,21 @@ const PlanetaryDataSection = () => {
     <section className="planetary-data-section">
       <div className="section-container">
         <div className="content-wrapper">
-          <div className="video-container">
-            <img 
-              src="https://picsum.photos/id/1015/1200/600" 
-              alt="Planetary Data Visualization"
-              className="data-image"
-            />
-            <div className="play-button">
-              <div className="play-icon">▶️</div>
-            </div>
-          </div>
+    <div className="video-card">
+      <video
+        src="https://pixabay.com/videos/earth-spinning-globe-hud-computer-258542/"  
+        autoPlay
+        loop
+        muted
+        playsInline
+        className="video"
+      />
+      <div className="play-overlay">
+        <div className="play-button">
+          <div className="triangle"></div>
+        </div>
+      </div>
+    </div>
           <div className="written-content">
             <div className ="caption">
               <h2 className="section-title">
@@ -24,7 +29,7 @@ const PlanetaryDataSection = () => {
             </div>
               <div className="p-section">
                 <p className="section-subtitle">
-                  Planetary science goes beyond images. Comparing mass, diameter, gravity, and density, 
+                  Planetary science goes beyond images. Comparing <span className="blue-text" >mass, diameter, gravity, and density</span>, 
                   we gain insight into how planets form, behave, and interact within the solar system.
                 </p>
               </div>
