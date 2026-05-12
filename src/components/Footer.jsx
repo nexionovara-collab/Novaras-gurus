@@ -18,7 +18,7 @@ function Footer() {
 
           <p className="footer-text">
             Riskiyat, Abiola, Zekeri, Harbor,
-            Ibrahim, Nathan
+            Ibrahim, Nathan, Igbunuoghene
           </p>
         </div>
 
