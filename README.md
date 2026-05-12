@@ -9,6 +9,7 @@ A collaborative React web application built for the TS Academy Capstone. This pr
 * Member B: Chinemerem Harbor (@Kennharbor)
 * Member C: Ahmed Ibrahim Prosper (@fretdev)
 * Member D: Yashim Nathan (@Explayne)
+* Member E: Ajekuko Igbunuoghene (@kingIG417)
 
 ## How to Run Locally
 1. Clone the repository
