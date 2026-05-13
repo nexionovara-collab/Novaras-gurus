@@ -10,16 +10,14 @@ const Navbar = () => {
       <div className="navbar__inner">
 
         {/* Logo */}
-        <a href="#" className="navbar__logo">
+        <a href="#home" className="navbar__logo">
           <img src={logoImg} alt="Planet Creative World logo" className="navbar__logo-img" />
         </a>
 
         {/* Desktop nav links */}
         <nav className="navbar__links" aria-label="Main navigation">
           <a href="#home">Home</a>
-          <a href="#solar-system">Solar System</a>
           <a href="#planets">Planets</a>
-          <a href="#data">Data</a>
           <a href="#contact">Contact</a>
         </nav>
 
@@ -40,9 +38,7 @@ const Navbar = () => {
       {menuOpen && (
         <nav className="navbar__mobile-menu" aria-label="Mobile navigation">
           <a href="#home" onClick={() => setMenuOpen(false)}>Home</a>
-          <a href="#solar-system" onClick={() => setMenuOpen(false)}>Solar System</a>
           <a href="#planets" onClick={() => setMenuOpen(false)}>Planets</a>
-          <a href="#data" onClick={() => setMenuOpen(false)}>Data</a>
           <a href="#contact" onClick={() => setMenuOpen(false)}>Contact</a>
         </nav>
       )}
