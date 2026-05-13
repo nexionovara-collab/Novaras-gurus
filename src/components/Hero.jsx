@@ -13,7 +13,7 @@ function Hero() {
   return (
     <section
       id="home"
-      className="relative flex items-center overflow-hidden min-h-auto md:min-h-[calc(100vh-72px)] bg-[linear-gradient(135deg,#0b1a3b_0%,#0f2251_40%,#152d6e_70%,#0d2060_100%)]"
+      className="relative flex items-center overflow-hidden min-h-auto md:min-h-[calc(100vh-72px)] bg-[linear-gradient(135deg,#0b1a3b_0%,#0f2251_40%,#152d6e_70%,#0d2060_100%)] pb-16 md:pb-0"
     >
       {/* Star field background dots */}
       <div className="absolute inset-0 pointer-events-none" aria-hidden="true">
@@ -32,11 +32,11 @@ function Hero() {
         ))}
       </div>
 
-      {/* Main Content Layout */}
-      <div className="relative z-10 flex flex-col items-center justify-between w-full max-w-[1440px] px-6 pt-[50px] mx-auto text-center gap-8 md:flex-row md:items-end md:px-[60px] md:pt-[60px] md:text-left md:gap-[40px]">
+      
+      <div className="relative z-10 flex flex-col items-center justify-center w-full max-w-[1440px] px-6 pt-[80px] mx-auto text-center gap-12 md:flex-row md:justify-between md:px-[60px] md:pt-[60px] md:text-left md:gap-[40px]">
         
         {/* Left — Text Section */}
-        <div className="flex-shrink-0 w-full max-w-full md:max-w-[480px] md:pb-[80px]">
+        <div className="flex flex-col items-center flex-shrink-0 w-full max-w-full md:items-start md:max-w-[480px] md:pb-[80px]">
           <h1 className="mb-[22px] font-sans text-[34px] font-extrabold leading-tight tracking-tight text-white md:text-[42px] lg:text-[52px]">
             Explore Our Solar
             <br />
@@ -51,13 +51,8 @@ function Hero() {
             data-driven way.
           </p>
 
+          
           <div className="flex flex-wrap items-center justify-center gap-[14px] md:justify-start">
-            <a
-              href="#Planets"
-              className="inline-flex items-center justify-center px-[26px] py-[12px] rounded-[6px] font-sans text-[14px] font-medium text-white no-underline whitespace-nowrap bg-[#1a5dd4] border-2 border-[#1a5dd4] transition-all duration-200 cursor-pointer hover:bg-[#1650b8] hover:border-[#1650b8] active:scale-95"
-            >
-              Explore the Planets
-            </a>
             <a
               href="#data"
               className="inline-flex items-center justify-center px-[26px] py-[12px] rounded-[6px] font-sans text-[14px] font-medium text-white no-underline whitespace-nowrap bg-[#1a5dd4] border-2 border-[#1a5dd4] transition-all duration-200 cursor-pointer hover:bg-[#1650b8] hover:border-[#1650b8] active:scale-95"
@@ -73,9 +68,9 @@ function Hero() {
           </div>
         </div>
 
-        {/* Right — Earth Image */}
+        
         <div
-          className="relative flex items-end justify-center flex-shrink-0 mt-8 w-[280px] h-[280px] md:mt-0 md:w-[380px] md:h-[380px] lg:w-[480px] lg:h-[480px]"
+          className="relative flex items-end justify-center flex-shrink-0 w-[280px] h-[280px] md:w-[380px] md:h-[380px] lg:w-[480px] lg:h-[480px]"
           aria-label="Earth from space"
         >
           <div
