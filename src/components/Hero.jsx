@@ -1,6 +1,4 @@
-// src/components/Hero.jsx
-
-import "./Hero.css";
+import React from "react";
 import earthImg from "../assets/earth.png";
 
 const stars = Array.from({ length: 60 }, (_, i) => ({
@@ -13,16 +11,16 @@ const stars = Array.from({ length: 60 }, (_, i) => ({
 
 function Hero() {
   return (
-    <section className="hero" id="home">
+    <section
+      id="home"
+      className="relative flex items-center overflow-hidden min-h-auto md:min-h-[calc(100vh-72px)] bg-[linear-gradient(135deg,#0b1a3b_0%,#0f2251_40%,#152d6e_70%,#0d2060_100%)]"
+    >
       {/* Star field background dots */}
-      <div
-        className="hero__stars"
-        aria-hidden="true"
-      >
+      <div className="absolute inset-0 pointer-events-none" aria-hidden="true">
         {stars.map((star) => (
           <span
             key={star.id}
-            className="hero__star"
+            className="absolute bg-white rounded-full"
             style={{
               top: star.top,
               left: star.left,
@@ -34,16 +32,18 @@ function Hero() {
         ))}
       </div>
 
-      <div className="hero__content">
-        {/* Left — text */}
-        <div className="hero__text">
-          <h1 className="hero__heading">
+      {/* Main Content Layout */}
+      <div className="relative z-10 flex flex-col items-center justify-between w-full max-w-[1440px] px-6 pt-[50px] mx-auto text-center gap-8 md:flex-row md:items-end md:px-[60px] md:pt-[60px] md:text-left md:gap-[40px]">
+        
+        {/* Left — Text Section */}
+        <div className="flex-shrink-0 w-full max-w-full md:max-w-[480px] md:pb-[80px]">
+          <h1 className="mb-[22px] font-sans text-[34px] font-extrabold leading-tight tracking-tight text-white md:text-[42px] lg:text-[52px]">
             Explore Our Solar
             <br />
             System Through Data
           </h1>
 
-          <p className="hero__subtext">
+          <p className="mb-[36px] w-full max-w-full font-sans text-[14px] leading-[1.75] text-white/65 md:max-w-[380px]">
             Understand the planets not just by name,
             but by measurable facts. From size and
             mass to gravity and density, this page
@@ -51,43 +51,42 @@ function Hero() {
             data-driven way.
           </p>
 
-          <div className="hero__actions">
+          <div className="flex flex-wrap items-center justify-center gap-[14px] md:justify-start">
             <a
               href="#Planets"
-              className="hero__btn hero__btn--primary"
+              className="inline-flex items-center justify-center px-[26px] py-[12px] rounded-[6px] font-sans text-[14px] font-medium text-white no-underline whitespace-nowrap bg-[#1a5dd4] border-2 border-[#1a5dd4] transition-all duration-200 cursor-pointer hover:bg-[#1650b8] hover:border-[#1650b8] active:scale-95"
             >
               Explore the Planets
             </a>
             <a
               href="#data"
-              className="hero__btn hero__btn--primary"
+              className="inline-flex items-center justify-center px-[26px] py-[12px] rounded-[6px] font-sans text-[14px] font-medium text-white no-underline whitespace-nowrap bg-[#1a5dd4] border-2 border-[#1a5dd4] transition-all duration-200 cursor-pointer hover:bg-[#1650b8] hover:border-[#1650b8] active:scale-95"
             >
               Explore the Data
             </a>
-
             <a
               href="#contact"
-              className="hero__btn hero__btn--outline"
+              className="inline-flex items-center justify-center px-[26px] py-[12px] rounded-[6px] font-sans text-[14px] font-medium text-white no-underline whitespace-nowrap bg-transparent border-2 border-white/55 transition-all duration-200 cursor-pointer hover:border-white/90 hover:bg-white/5 active:scale-95"
             >
               Contact Us
             </a>
           </div>
         </div>
 
-        {/* Right — Earth */}
+        {/* Right — Earth Image */}
         <div
-          className="hero__earth-wrapper"
+          className="relative flex items-end justify-center flex-shrink-0 mt-8 w-[280px] h-[280px] md:mt-0 md:w-[380px] md:h-[380px] lg:w-[480px] lg:h-[480px]"
           aria-label="Earth from space"
         >
           <div
-            className="hero__earth-glow"
+            className="absolute bottom-[30px] left-1/2 -translate-x-1/2 w-[240px] h-[240px] rounded-full blur-[24px] pointer-events-none md:w-[340px] md:h-[340px] lg:w-[420px] lg:h-[420px] bg-[radial-gradient(circle_at_50%_50%,rgba(74,144,226,0.22)_0%,rgba(26,93,212,0.12)_50%,transparent_75%)]"
             aria-hidden="true"
           />
 
           <img
             src={earthImg}
             alt="Earth from space — Blue Marble"
-            className="hero__earth-img"
+            className="relative z-10 object-contain block w-[260px] h-[260px] drop-shadow-[-20px_20px_60px_rgba(0,0,60,0.5)] md:w-[360px] md:h-[360px] lg:w-[460px] lg:h-[460px]"
           />
         </div>
       </div>
