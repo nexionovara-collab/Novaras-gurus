@@ -3,90 +3,89 @@ import earthImg from "../assets/earth.png";
 
 const stars = Array.from({ length: 60 }, (_, i) => ({
   id: i,
-  top: `${(i * 17) % 100}%`,
-  left: `${(i * 13) % 100}%`,
-  size: `${(i % 3) + 1}px`,
-  opacity: ((i % 5) + 2) / 10,
-}));
+    top: `${(i * 17) % 100}%`,
+      left: `${(i * 13) % 100}%`,
+        size: `${(i % 3) + 1}px`,
+          opacity: ((i % 5) + 2) / 10,
+          }));
 
-function Hero() {
-  return (
-    <section
-      id="home"
-      className="relative flex items-center overflow-hidden min-h-auto md:min-h-[calc(100vh-72px)] bg-[linear-gradient(135deg,#0b1a3b_0%,#0f2251_40%,#152d6e_70%,#0d2060_100%)] pb-16 md:pb-0"
-    >
-      {/* Star field background dots */}
-      <div className="absolute inset-0 pointer-events-none" aria-hidden="true">
-        {stars.map((star) => (
-          <span
-            key={star.id}
-            className="absolute bg-white rounded-full"
-            style={{
-              top: star.top,
-              left: star.left,
-              width: star.size,
-              height: star.size,
-              opacity: star.opacity,
-            }}
-          />
-        ))}
-      </div>
+          function Hero() {
+            return (
+                <section
+                      id="home"
+                            className="relative flex items-center overflow-hidden min-h-auto md:min-h-[calc(100vh-72px)] bg-[linear-gradient(135deg,#0b1a3b_0%,#0f2251_40%,#152d6e_70%,#0d2060_100%)] pb-16 md:pb-0"
+                                >
 
-      
-      <div className="relative z-10 flex flex-col items-center justify-center w-full max-w-[1440px] px-6 pt-[80px] mx-auto text-center gap-12 md:flex-row md:justify-between md:px-[60px] md:pt-[60px] md:text-left md:gap-[40px]">
-        
-        {/* Left — Text Section */}
-        <div className="flex flex-col items-center flex-shrink-0 w-full max-w-full md:items-start md:max-w-[480px] md:pb-[80px]">
-          <h1 className="mb-[22px] font-sans text-[34px] font-extrabold leading-tight tracking-tight text-white md:text-[42px] lg:text-[52px]">
-            Explore Our Solar
-            <br />
-            System Through Data
-          </h1>
+                                      <div className="absolute inset-0 pointer-events-none" aria-hidden="true">
+                                              {stars.map((star) => (
+                                                        <span
+                                                                    key={star.id}
+                                                                                className="absolute bg-white rounded-full"
+                                                                                            style={{
+                                                                                                          top: star.top,
+                                                                                                                        left: star.left,
+                                                                                                                                      width: star.size,
+                                                                                                                                                    height: star.size,
+                                                                                                                                                                  opacity: star.opacity,
+                                                                                                                                                                              }}
+                                                                                                                                                                                        />
+                                                                                                                                                                                                ))}
+                                                                                                                                                                                                      </div>
 
-          <p className="mb-[36px] w-full max-w-full font-sans text-[14px] leading-[1.75] text-white/65 md:max-w-[380px]">
-            Understand the planets not just by name,
-            but by measurable facts. From size and
-            mass to gravity and density, this page
-            breaks down the solar system in a clear,
-            data-driven way.
-          </p>
+                                                                                                                                                                                                            <div className="relative z-10 flex flex-col items-center justify-center w-full max-w-[1440px] px-6 pt-[80px] mx-auto text-center gap-12 lg:flex-row lg:justify-between lg:px-[60px] lg:pt-[60px] lg:text-left lg:gap-[40px]">
+                                                                                                                                                                                                                   
+                                                                                                                                                                                                                           <div className="flex flex-col items-center flex-shrink-0 w-full max-w-full lg:items-start lg:max-w-[480px] lg:pb-[80px]">
+                                                                                                                                                                                                                                     <h1 className="mb-[22px] font-sans text-[34px] font-extrabold leading-tight tracking-tight text-white md:text-[42px] lg:text-[52px]">
+                                                                                                                                                                                                                                                 Explore Our Solar
+                                                                                                                                                                                                                                                             <br />
+                                                                                                                                                                                                                                                                         System Through Data
+                                                                                                                                                                                                                                                                                   </h1>
 
-          
-          <div className="flex flex-wrap items-center justify-center gap-[14px] md:justify-start">
-            <a
-              href="#data"
-              className="inline-flex items-center justify-center px-[26px] py-[12px] rounded-[6px] font-sans text-[14px] font-medium text-white no-underline whitespace-nowrap bg-[#1a5dd4] border-2 border-[#1a5dd4] transition-all duration-200 cursor-pointer hover:bg-[#1650b8] hover:border-[#1650b8] active:scale-95"
-            >
-              Explore the Data
-            </a>
-            <a
-              href="#contact"
-              className="inline-flex items-center justify-center px-[26px] py-[12px] rounded-[6px] font-sans text-[14px] font-medium text-white no-underline whitespace-nowrap bg-transparent border-2 border-white/55 transition-all duration-200 cursor-pointer hover:border-white/90 hover:bg-white/5 active:scale-95"
-            >
-              Contact Us
-            </a>
-          </div>
-        </div>
+                                                                                                                                                                                                                                                                                             <p className="mb-[36px] w-full max-w-full font-sans text-[14px] leading-[1.75] text-white/65 md:max-w-[380px]">
+                                                                                                                                                                                                                                                                                                         Understand the planets not just by name,
+                                                                                                                                                                                                                                                                                                                     but by measurable facts. From size and
+                                                                                                                                                                                                                                                                                                                                 mass to gravity and density, this page
+                                                                                                                                                                                                                                                                                                                                             breaks down the solar system in a clear,
+                                                                                                                                                                                                                                                                                                                                                         data-driven way.
+                                                                                                                                                                                                                                                                                                                                                                   </p>
 
-        
-        <div
-          className="relative flex items-end justify-center flex-shrink-0 w-[280px] h-[280px] md:w-[380px] md:h-[380px] lg:w-[480px] lg:h-[480px]"
-          aria-label="Earth from space"
-        >
-          <div
-            className="absolute bottom-[30px] left-1/2 -translate-x-1/2 w-[240px] h-[240px] rounded-full blur-[24px] pointer-events-none md:w-[340px] md:h-[340px] lg:w-[420px] lg:h-[420px] bg-[radial-gradient(circle_at_50%_50%,rgba(74,144,226,0.22)_0%,rgba(26,93,212,0.12)_50%,transparent_75%)]"
-            aria-hidden="true"
-          />
+                                                                                                                                                                                                                                                                                                                                                                             {/* Actions */}
+                                                                                                                                                                                                                                                                                                                                                                                       <div className="flex flex-wrap items-center justify-center gap-[14px] lg:justify-start">
+                                                                                                                                                                                                                                                                                                                                                                                                   <a
+                                                                                                                                                                                                                                                                                                                                                                                                                 href="#data"
+                                                                                                                                                                                                                                                                                                                                                                                                                               className="inline-flex items-center justify-center px-[26px] py-[12px] rounded-[6px] font-sans text-[14px] font-medium text-white no-underline whitespace-nowrap bg-[#1a5dd4] border-2 border-[#1a5dd4] transition-all duration-200 cursor-pointer hover:bg-[#1650b8] hover:border-[#1650b8] active:scale-95"
+                                                                                                                                                                                                                                                                                                                                                                                                                                           >
+                                                                                                                                                                                                                                                                                                                                                                                                                                                         Explore the Data
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                     </a>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 <a
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               href="#contact"
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             className="inline-flex items-center justify-center px-[26px] py-[12px] rounded-[6px] font-sans text-[14px] font-medium text-white no-underline whitespace-nowrap bg-transparent border-2 border-white/55 transition-all duration-200 cursor-pointer hover:border-white/90 hover:bg-white/5 active:scale-95"
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         >
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       Contact Us
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   </a>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             </div>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     </div>
 
-          <img
-            src={earthImg}
-            alt="Earth from space — Blue Marble"
-            className="relative z-10 object-contain block w-[260px] h-[260px] drop-shadow-[-20px_20px_60px_rgba(0,0,60,0.5)] md:w-[360px] md:h-[360px] lg:w-[460px] lg:h-[460px]"
-          />
-        </div>
-      </div>
-    </section>
-  );
-}
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             {/* Right — Earth Image (His exact glowing layout) */}
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     <div
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               className="relative flex items-end justify-center flex-shrink-0 w-[280px] h-[280px] md:w-[380px] md:h-[380px] lg:w-[480px] lg:h-[480px]"
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         aria-label="Earth from space"
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 >
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           <div
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       className="absolute bottom-[30px] left-1/2 -translate-x-1/2 w-[240px] h-[240px] rounded-full blur-[24px] pointer-events-none md:w-[340px] md:h-[340px] lg:w-[420px] lg:h-[420px] bg-[radial-gradient(circle_at_50%_50%,rgba(74,144,226,0.22)_0%,rgba(26,93,212,0.12)_50%,transparent_75%)]"
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   aria-hidden="true"
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             />
 
-export default Hero;
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       <img
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   src={earthImg}
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               alt="Earth from space — Blue Marble"
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           className="relative z-10 object-contain block w-[260px] h-[260px] drop-shadow-[-20px_20px_60px_rgba(0,0,60,0.5)] md:w-[360px] md:h-[360px] lg:w-[460px] lg:h-[460px]"
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     />
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             </div>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   </div>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       </section>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         );
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         }
+
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         export default Hero;
+                                                                                                                                                                                                                                                
