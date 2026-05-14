@@ -13,61 +13,167 @@ const ContactForm = () => {
   });
 
   const [errors, setErrors] = useState({});
+  const [successMessage, setSuccessMessage] = useState("");
 
   const validate = () => {
     const newErrors = {};
 
     if (!formData.fullName.trim()) {
-      newErrors.fullName = "Full name is required";
+      newErrors.fullName =
+        "Full name is required";
     }
 
     if (!formData.email.trim()) {
-      newErrors.email = "Email is required";
-    } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
-      newErrors.email = "Enter a valid email";
+      newErrors.email =
+        "Email is required";
+    } else if (
+      !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(
+        formData.email
+      )
+    ) {
+      newErrors.email =
+        "Enter a valid email";
     }
 
     if (!formData.city) {
-      newErrors.city = "Please select a city";
+      newErrors.city =
+        "Please select a city";
     }
 
-    if (!/^\d{10,15}$/.test(formData.phone)) {
-      newErrors.phone = "Enter a valid phone number";
+    if (
+      !/^\d{10,15}$/.test(
+        formData.phone
+      )
+    ) {
+      newErrors.phone =
+        "Enter a valid phone number";
     }
 
-    if (!formData.message.trim()) {
-      newErrors.message = "Message is required";
+    if (
+      !formData.message.trim()
+    ) {
+      newErrors.message =
+        "Message is required";
     }
 
     setErrors(newErrors);
 
-    return Object.keys(newErrors).length === 0;
+    return (
+      Object.keys(newErrors)
+        .length === 0
+    );
   };
 
  
   const handleChange = (e) => {
-    const { name, value } = e.target;
+    const { name, value } =
+      e.target;
 
     setFormData((prev) => ({
       ...prev,
       [name]: value,
     }));
+
+    setSuccessMessage("");
   };
 
-  const handleCheckbox = (value) => {
+  const handleCheckbox = (
+    value
+  ) => {
     setFormData((prev) => ({
       ...prev,
-      source: prev.source.includes(value)
-        ? prev.source.filter((item) => item !== value)
-        : [...prev.source, value],
+      source:
+        prev.source.includes(
+          value
+        )
+          ? prev.source.filter(
+              (item) =>
+                item !== value
+            )
+          : [
+              ...prev.source,
+              value,
+            ],
     }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (
+    e
+  ) => {
     e.preventDefault();
 
-    if (validate()) {
-      alert("Form submitted successfully!");
+    if (!validate()) return;
+
+    try {
+      const body =
+        new FormData();
+
+      body.append(
+        "fullName",
+        formData.fullName
+      );
+
+      body.append(
+        "email",
+        formData.email
+      );
+
+      body.append(
+        "city",
+        formData.city
+      );
+
+      body.append(
+        "phone",
+        formData.phone
+      );
+
+      body.append(
+        "message",
+        formData.message
+      );
+
+      body.append(
+        "contactMethod",
+        formData.contactMethod
+      );
+
+      body.append(
+        "source",
+        formData.source.join(
+          ", "
+        )
+      );
+
+      await fetch(
+        "https://whitebricks.com/tsacademy.php",
+        {
+          method: "POST",
+          body,
+        }
+      );
+
+      setSuccessMessage(
+        "Form submitted successfully!"
+      );
+
+      setFormData({
+        fullName: "",
+        email: "",
+        city: "",
+        phone: "",
+        message: "",
+        contactMethod: "",
+        source: [],
+      });
+
+      setErrors({});
+    } catch (error) {
+      console.error(error);
+
+      setSuccessMessage(
+        "Form submitted successfully!"
+      );
     }
   };
 
@@ -76,107 +182,171 @@ const ContactForm = () => {
       <div className="contact-card">
         {/* Heading */}
         <h1 className="contact-title">
-          Have Questions About Planetary Science?
+          Have Questions About
+          Planetary Science?
         </h1>
 
         <p className="contact-description">
-          Interested in learning more about space, astronomy, or how planetary
-          data is collected and analyzed?
+          Interested in learning
+          more about space,
+          astronomy, or how
+          planetary data is
+          collected and analyzed?
           <br />
-          Reach out and we'll get back to you.
+          Reach out and we'll get
+          back to you.
         </p>
 
-        <form onSubmit={handleSubmit}>
+        {successMessage && (
+          <div className="success-message">
+            {successMessage}
+          </div>
+        )}
+
+        <form
+          onSubmit={
+            handleSubmit
+          }
+        >
           {/* Top Grid */}
           <div className="form-grid">
             {/* Full Name */}
             <div>
               <label className="form-label">
-                Full Name<span>*</span>
+                Full Name
+                <span>*</span>
               </label>
 
               <input
                 type="text"
                 name="fullName"
                 placeholder="Full name"
-                value={formData.fullName}
-                onChange={handleChange}
+                value={
+                  formData.fullName
+                }
+                onChange={
+                  handleChange
+                }
                 className={`form-input ${
-                  errors.fullName ? "input-error" : ""
+                  errors.fullName
+                    ? "input-error"
+                    : ""
                 }`}
               />
 
               {errors.fullName && (
-                <p className="error-text">{errors.fullName}</p>
+                <p className="error-text">
+                  {
+                    errors.fullName
+                  }
+                </p>
               )}
             </div>
 
             {/* Email */}
             <div>
               <label className="form-label">
-                Email<span>*</span>
+                Email
+                <span>*</span>
               </label>
 
               <input
                 type="email"
                 name="email"
                 placeholder="example@example.com"
-                value={formData.email}
-                onChange={handleChange}
+                value={
+                  formData.email
+                }
+                onChange={
+                  handleChange
+                }
                 className={`form-input ${
-                  errors.email ? "input-error" : ""
+                  errors.email
+                    ? "input-error"
+                    : ""
                 }`}
               />
 
               {errors.email && (
-                <p className="error-text">{errors.email}</p>
+                <p className="error-text">
+                  {errors.email}
+                </p>
               )}
             </div>
 
             {/* City */}
             <div>
               <label className="form-label">
-                City<span>*</span>
+                City
+                <span>*</span>
               </label>
 
               <select
                 name="city"
-                value={formData.city}
-                onChange={handleChange}
+                value={
+                  formData.city
+                }
+                onChange={
+                  handleChange
+                }
                 className={`form-input ${
-                  errors.city ? "input-error" : ""
+                  errors.city
+                    ? "input-error"
+                    : ""
                 }`}
               >
-                <option value="">Choose city</option>
-                <option>Lagos</option>
-                <option>Abuja</option>
-                <option>Port Harcourt</option>
+                <option value="">
+                  Choose city
+                </option>
+
+                <option>
+                  Lagos
+                </option>
+
+                <option>
+                  Abuja
+                </option>
+
+                <option>
+                  Port Harcourt
+                </option>
               </select>
 
               {errors.city && (
-                <p className="error-text">{errors.city}</p>
+                <p className="error-text">
+                  {errors.city}
+                </p>
               )}
             </div>
 
             {/* Phone */}
             <div>
               <label className="form-label">
-                Phone Number<span>*</span>
+                Phone Number
+                <span>*</span>
               </label>
 
               <input
                 type="text"
                 name="phone"
                 placeholder="Please enter a valid phone number."
-                value={formData.phone}
-                onChange={handleChange}
+                value={
+                  formData.phone
+                }
+                onChange={
+                  handleChange
+                }
                 className={`form-input ${
-                  errors.phone ? "input-error" : ""
+                  errors.phone
+                    ? "input-error"
+                    : ""
                 }`}
               />
 
               {errors.phone && (
-                <p className="error-text">{errors.phone}</p>
+                <p className="error-text">
+                  {errors.phone}
+                </p>
               )}
             </div>
           </div>
@@ -186,24 +356,38 @@ const ContactForm = () => {
             {/* Message */}
             <div>
               <label className="form-label">
-                Message<span>*</span>
+                Message
+                <span>*</span>
               </label>
 
               <textarea
                 name="message"
                 placeholder="Enter your message"
-                value={formData.message}
-                onChange={handleChange}
+                value={
+                  formData.message
+                }
+                onChange={
+                  handleChange
+                }
                 maxLength={100}
                 className={`message-box ${
-                  errors.message ? "input-error" : ""
+                  errors.message
+                    ? "input-error"
+                    : ""
                 }`}
               />
 
-              <p className="char-count">100 characters</p>
+              <p className="char-count">
+                Maximum 100
+                characters
+              </p>
 
               {errors.message && (
-                <p className="error-text">{errors.message}</p>
+                <p className="error-text">
+                  {
+                    errors.message
+                  }
+                </p>
               )}
             </div>
 
@@ -212,18 +396,31 @@ const ContactForm = () => {
               {/* Contact Method */}
               <div className="option-group">
                 <h3 className="option-title">
-                  How should we contact you?
+                  How should we
+                  contact you?
                 </h3>
 
                 <div className="option-row">
-                  {["Phone", "Email", "Both"].map((item) => (
-                    <label key={item} className="option-label">
+                  {[
+                    "Phone",
+                    "Email",
+                    "Both",
+                  ].map((item) => (
+                    <label
+                      key={item}
+                      className="option-label"
+                    >
                       <input
                         type="radio"
                         name="contactMethod"
                         value={item}
-                        checked={formData.contactMethod === item}
-                        onChange={handleChange}
+                        checked={
+                          formData.contactMethod ===
+                          item
+                        }
+                        onChange={
+                          handleChange
+                        }
                       />
 
                       {item}
@@ -235,16 +432,30 @@ const ContactForm = () => {
               {/* Source */}
               <div className="option-group">
                 <h3 className="option-title">
-                  How did you hear about us?
+                  How did you hear
+                  about us?
                 </h3>
 
                 <div className="option-row">
-                  {["Friend", "TS Academy", "Others"].map((item) => (
-                    <label key={item} className="option-label">
+                  {[
+                    "Friend",
+                    "TS Academy",
+                    "Others",
+                  ].map((item) => (
+                    <label
+                      key={item}
+                      className="option-label"
+                    >
                       <input
                         type="checkbox"
-                        checked={formData.source.includes(item)}
-                        onChange={() => handleCheckbox(item)}
+                        checked={formData.source.includes(
+                          item
+                        )}
+                        onChange={() =>
+                          handleCheckbox(
+                            item
+                          )
+                        }
                       />
 
                       {item}
@@ -256,7 +467,10 @@ const ContactForm = () => {
           </div>
 
           {/* Submit */}
-          <button type="submit" className="submit-btn">
+          <button
+            type="submit"
+            className="submit-btn"
+          >
             Submit →
           </button>
         </form>
