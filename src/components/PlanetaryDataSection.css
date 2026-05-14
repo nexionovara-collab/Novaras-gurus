@@ -63,36 +63,6 @@
   object-fit: cover;
 }
 
-/* Play Button Overlay */
-.play-overlay {
-  position: absolute;
-  inset: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  pointer-events: none;
-}
-
-.play-button {
-  width: 80px;
-  height: 80px;
-  background: white;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-}
-
-.triangle {
-  width: 0;
-  height: 0;
-  border-top: 14px solid transparent;
-  border-bottom: 14px solid transparent;
-  border-left: 20px solid #2563eb;
-  margin-left: 6px;
-}
-
 /* RESPONSIVE MEDIA QUERIES */
 @media (max-width: 900px) {
   .content-wrapper {
@@ -120,17 +90,5 @@
 
   .section-subtitle {
     font-size: 1rem;
-  }
-
-  .play-button {
-    width: 65px;
-    height: 65px;
-  }
-  
-  .triangle {
-    border-top: 12px solid transparent;
-    border-bottom: 12px solid transparent;
-    border-left: 18px solid #2563eb;
-    margin-left: 4px;
   }
 }
