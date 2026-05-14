@@ -78,6 +78,6 @@
   }
 
   .submit-btn {
-    @apply mt-10 bg-[#1d4fb8] hover:bg-[#163f95] transition text-white px-16 py-3 rounded-md font-semibold;
-  }
+  @apply mt-10 bg-[#1d4fb8] hover:bg-[#163f95] transition text-white px-16 py-3 rounded-lg font-semibold shadow-md;
+}
 }
