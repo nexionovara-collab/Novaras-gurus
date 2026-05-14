@@ -1,11 +1,11 @@
 import React from 'react';
+import earthVideo from '../assets/258542_tiny.mp4';
 import './PlanetaryDataSection.css';
 
 const PlanetaryDataSection = () => {
   return (
     <section className="planetary-data-section">
       <div className="section-container">
-        {/* We put Text first so it stacks on top for mobile! */}
         <div className="content-wrapper">
           
           {/* TEXT SECTION */}
@@ -25,20 +25,13 @@ const PlanetaryDataSection = () => {
           {/* VIDEO SECTION */}
           <div className="video-card">
             <video
-              src="https://pixabay.com/videos/download/earth-spinning-globe-hud-computer-258542_tiny.mp4"   
+              src={earthVideo}
               autoPlay
               loop
               muted
               playsInline
               className="video"
             />
-
-            {/* Play Button Overlay */}
-            <div className="play-overlay">
-              <div className="play-button">
-                <div className="triangle"></div>
-              </div>
-            </div>
           </div>
           
         </div>
