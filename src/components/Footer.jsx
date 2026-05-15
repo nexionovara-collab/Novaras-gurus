@@ -60,7 +60,7 @@ function Footer() {
         <div className="mb-10">
           <h2 className="text-2xl md:text-3xl font-bold mb-4">About</h2>
           <p className="text-white/80 text-base md:text-lg leading-relaxed">
-            first name of group members
+            First Name of Group Members are:
           </p>
           <p className="text-white/80 text-base md:text-lg leading-relaxed mt-1">
             Riskiyat, Abiola, Zekeri, Harbor, Ibrahim, Nathan, Igbunuoghene
@@ -74,10 +74,10 @@ function Footer() {
         <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
           <div>
             <p className="text-white text-sm md:text-base font-medium leading-relaxed">
-              ©2026 Designed by Amaka &amp; Ifeoma A.
+              ©2026 Designed by/Collaborators: Amaka & Ifeoma A, Riskiyat, Abiola, Zekeri, Harbor, Ibrahim, Nathan and Igbunuoghene.
             </p>
             <p className="text-white text-sm md:text-base font-medium leading-relaxed">
-              Built by NexioNovara. All rights reserved
+              Built by Nexionovara, Group 5 Capstone Project with Vite,  React, Fetch API, CSS and Collaborative Git Workflow. All rights reserved 
             </p>
           </div>
 
