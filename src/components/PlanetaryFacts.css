@@ -1,37 +1,29 @@
-/* src/components/PlanetaryFacts.css */
-
-@import "tailwindcss";
+/* @import "tailwindcss";
 
 @layer components {
   .facts-section {
-    @apply max-w-7xl mx-auto px-8 py-20 bg-white;
+    @apply max-w-7xl mx-auto px-4 md:px-8 py-16 bg-white;
   }
 
   .facts-title {
-    @apply text-[#1f4fb8] text-5xl font-bold mb-4;
+    @apply text-[#1f4fb8] text-3xl md:text-5xl font-bold mb-4 text-center;
   }
 
   .facts-description {
-    @apply text-gray-700 text-lg leading-relaxed max-w-4xl mb-12;
+    @apply text-gray-700 text-sm md:text-lg leading-relaxed max-w-4xl mb-10 text-center mx-auto;
   }
 
   .facts-subtitle {
-    @apply text-gray-800 font-semibold text-lg mb-6;
+    @apply hidden md:block text-gray-800 font-semibold text-lg mb-6;
+  } */
+
+  /* HIDE TABLE ON MOBILE */
+  /* .table-wrapper {
+    @apply hidden md:block overflow-hidden rounded-3xl bg-white p-[2px];
   }
 
-  /* TABLE WRAPPER */
-  .table-wrapper {
-    @apply overflow-hidden rounded-3xl bg-white p-[2px];
-  }
-
-  /* TABLE */
   .planet-table {
     @apply w-full border-separate border-spacing-[3px] bg-white rounded-3xl;
-  }
-
-  /* HEADER */
-  .planet-table thead tr {
-    @apply bg-transparent;
   }
 
   .planet-table th {
@@ -44,7 +36,6 @@
            px-5;
   }
 
-  /* BODY CELLS */
   .planet-table td {
     @apply bg-[#edf2f8]
            text-center
@@ -54,7 +45,6 @@
            px-6;
   }
 
-  /* CATEGORY CELLS */
   .category-cell {
     @apply bg-[#dbe6f7]
            font-bold
@@ -62,7 +52,56 @@
            align-middle
            text-2xl;
   }
+} */
 
+
+@import "tailwindcss";
+@layer components {
+  .facts-section {
+    @apply hidden md:block max-w-7xl mx-auto px-8 py-20 bg-white;
+  }
+  .facts-title {
+    @apply text-[#1f4fb8] text-5xl font-bold mb-4;
+  }
+  .facts-description {
+    @apply text-gray-700 text-lg leading-relaxed max-w-4xl mb-12;
+  }
+  .facts-subtitle {
+    @apply text-gray-800 font-semibold text-lg mb-6;
+  }
+  .table-wrapper {
+    @apply overflow-hidden rounded-3xl bg-white p-[2px];
+  }
+  .planet-table {
+    @apply w-full border-separate border-spacing-[3px] bg-white rounded-3xl;
+  }
+  .planet-table thead tr {
+    @apply bg-transparent;
+  }
+  .planet-table th {
+    @apply bg-[#1f4fb8]
+           text-white
+           text-xl
+           font-semibold
+           text-center
+           py-7
+           px-5;
+  }
+  .planet-table td {
+    @apply bg-[#edf2f8]
+           text-center
+           text-gray-900
+           text-xl
+           py-10
+           px-6;
+  }
+  .category-cell {
+    @apply bg-[#dbe6f7]
+           font-bold
+           text-gray-900
+           align-middle
+           text-2xl;
+  }
   .sub-category {
     @apply bg-[#dbe6f7]
            font-bold
@@ -70,21 +109,35 @@
            align-middle
            text-xl;
   }
-
-  /* ROUNDED CORNERS */
   .planet-table thead tr th:first-child {
     @apply rounded-tl-3xl;
   }
-
   .planet-table thead tr th:last-child {
     @apply rounded-tr-3xl;
   }
-
   .planet-table tbody tr:last-child td:first-child {
     @apply rounded-bl-3xl;
   }
-
   .planet-table tbody tr:last-child td:last-child {
     @apply rounded-br-3xl;
+  }
+}
+
+
+@import "tailwindcss";
+
+/* Hidden on mobile by default via inline style on the element.
+   Show only on desktop (768px and above). */
+@media (min-width: 768px) {
+  .planetary-facts-section {
+    display: block !important;
+  }
+}
+
+
+/* Explicit mobile safeguard — ensures facts section is hidden even if Tailwind JIT misses it */
+@media (max-width: 767px) {
+  .facts-section {
+    display: none !important;
   }
 }

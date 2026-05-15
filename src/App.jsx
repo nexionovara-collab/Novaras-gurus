@@ -10,25 +10,27 @@ import Footer from "./components/Footer";
 
 function App() {
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-white overflow-x-hidden">
       {/* Navigation */}
       <Navbar />
 
-      {/* Hero Section */}
+      {/* Hero */}
       <Hero />
+
+      {/* Planetary Data */}
       <PlanetaryDataSection />
+
       {/* Planet Cards */}
       <section id="data">
-        
         <PlanetList />
       </section>
 
-      {/* Planetary Facts Table */}
+      {/* Facts */}
       <section id="facts">
         <PlanetaryFacts />
       </section>
 
-      {/* Contact Form */}
+      {/* Contact */}
       <section id="contact">
         <ContactForm />
       </section>
