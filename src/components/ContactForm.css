@@ -1,4 +1,4 @@
-@import "tailwindcss";
+/* @import "tailwindcss";
 
 @layer components {
   .app-container {
@@ -80,4 +80,144 @@
   .submit-btn {
   @apply mt-10 bg-[#1d4fb8] hover:bg-[#163f95] transition text-white px-16 py-3 rounded-lg font-semibold shadow-md;
 }
-}
+} */
+
+
+
+
+/* @import "tailwindcss";
+
+@layer components {
+  .app-container {
+    @apply min-h-screen bg-[#f5f5f5] py-10 px-4;
+  }
+  .contact-wrapper {
+    @apply flex justify-center items-center bg-[#f5f5f5] py-10 px-3;
+  }
+  .contact-card {
+    @apply w-full max-w-6xl bg-white border border-gray-300 px-4 md:px-16 py-10 md:py-14 rounded-sm;
+  }
+  .contact-title {
+    @apply text-[#1d4fb8] text-2xl md:text-4xl font-bold mb-4 text-center;
+  }
+  .contact-description {
+    @apply text-gray-700 leading-relaxed mb-10 text-sm md:text-base text-center max-w-xl mx-auto;
+  }
+  .form-grid {
+    @apply grid grid-cols-1 md:grid-cols-2 gap-5 mb-5;
+  }
+  .bottom-grid {
+    @apply grid grid-cols-1 md:grid-cols-2 gap-6;
+  }
+  .form-label {
+    @apply block text-sm font-semibold mb-2;
+  }
+  .form-label span {
+    @apply text-red-500;
+  }
+  .form-input {
+    @apply w-full border border-gray-300 rounded-md px-4 py-3 outline-none text-sm focus:border-blue-600 transition-colors;
+  }
+  .message-box {
+    @apply w-full border border-gray-300 rounded-md px-4 py-3 outline-none text-sm min-h-[140px] resize-none focus:border-blue-600 transition-colors;
+  }
+
+  /* input-error works on both desktop and mobile */
+  /* .input-error {
+    @apply border-red-500;
+  }
+  .input-error:focus {
+    @apply border-red-500;
+    box-shadow: none !important;
+  }
+
+  .error-text {
+    @apply text-red-500 text-xs mt-1 block;
+  }
+  .char-count {
+    @apply text-xs text-gray-500 mt-2;
+  }
+  .options-wrapper {
+    @apply pt-2;
+  }
+  .option-group {
+    @apply mb-10;
+  }
+  .option-title {
+    @apply text-sm font-semibold mb-4;
+  }
+  .option-row {
+    @apply flex flex-wrap gap-8;
+  }
+  .option-label {
+    @apply flex items-center gap-2 text-sm cursor-pointer;
+  }
+  .submit-btn {
+    @apply w-full md:w-auto mt-8 bg-[#1d4fb8] hover:bg-[#163f95] transition text-white px-16 py-3 rounded-md font-semibold text-center;
+  }
+  .success-message {
+    @apply bg-green-100 text-green-700 border border-green-300 px-4 py-3 rounded-md mb-6 text-sm text-center;
+  }
+} */ */
+
+/* ── Mobile overrides (Samsung S20 Ultra / iPhone XR: ≤ 430px) ── */
+/* @media (max-width: 768px) { */
+
+  /* Hide radio/checkbox options on mobile */
+  /* .options-wrapper {
+    display: none !important;
+  } */
+
+  /* Single-column stacked layout */
+  /* .form-grid,
+  .bottom-grid {
+    grid-template-columns: 1fr !important;
+    gap: 1rem;
+  }
+
+  .form-grid > *,
+  .bottom-grid > * {
+    width: 100%;
+  } */
+
+  /* Full-width submit button */
+  /* .submit-btn {
+    width: 100% !important;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    display: block;
+    text-align: center;
+  } */
+
+  /* ── Validation: error border ── */
+  /* .form-input.input-error,
+  .message-box.input-error {
+    border-color: #ef4444 !important;
+    border-width: 1px !important;
+  } */
+
+  /* Keep red border even when focused */
+  /* .form-input.input-error:focus,
+  .message-box.input-error:focus {
+    border-color: #ef4444 !important;
+    outline: none !important;
+    box-shadow: none !important;
+  } */
+
+  /* ── Validation: error message text ── */
+  /* .error-text {
+    display: block !important;
+    color: #ef4444 !important;
+    font-size: 0.75rem !important;
+    margin-top: 4px !important;
+    line-height: 1.25;
+  } */
+
+  /* Char count spacing */
+  /* .char-count {
+    margin-top: 8px;
+  }
+ }
+   */
+
+   

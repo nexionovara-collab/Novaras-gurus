@@ -1,6 +1,33 @@
 @import "tailwindcss";
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
 
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  overflow-x: hidden;
+}
+
 body {
   font-family: 'Inter', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+
+/* Add these lines to the bottom of your src/index.css */
+
+/* Hidden on mobile */
+.planetary-facts-section {
+  display: none;
+}
+
+/* Visible on desktop only */
+@media (min-width: 769px) {
+  .planetary-facts-section {
+    display: block !important;
+  }
 }

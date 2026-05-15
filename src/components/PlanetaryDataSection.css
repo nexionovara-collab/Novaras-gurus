@@ -1,7 +1,92 @@
+/* .planetary-data-section {
+  width: 100%;
+  padding: 70px 20px;
+  background-color: #f5f7fa;
+  display: flex;
+  justify-content: center;
+}
+
+.section-container {
+  width: 100%;
+  max-width: 1200px;
+}
+
+.content-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 80px;
+}
+
+.written-content {
+  flex: 1;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  line-height: 1.3;
+  font-weight: 700;
+  color: #1d4fb8;
+  margin-bottom: 24px;
+}
+
+.section-subtitle {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: #5f6b7a;
+}
+
+.blue-text {
+  color: #2563eb;
+  font-weight: bold;
+}
+
+.video-card {
+  width: 100%;
+  max-width: 450px;
+  aspect-ratio: 1 / 1;
+  border-radius: 28px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+} */
+
+/* MOBILE */
+/* @media (max-width: 768px) {
+  .content-wrapper {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .written-content {
+    text-align: center;
+  }
+
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .section-subtitle {
+    font-size: 0.95rem;
+    line-height: 1.7;
+  }
+
+  .video-card {
+    max-width: 100%;
+  }
+} */
+
+
+
 .planetary-data-section {
   width: 100%;
   padding: 80px 20px;
-  background-color: #f5f7fa;
+  background-color: #ffffff;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -12,15 +97,15 @@
   max-width: 1200px;
 }
 
-/* MAIN FLEX LAYOUT */
+/* DESKTOP: video left, text right */
 .content-wrapper {
   display: flex;
+  flex-direction: row;
   align-items: center;
   justify-content: space-between;
   gap: 80px;
 }
 
-/* TEXT SECTION */
 .written-content {
   flex: 1;
   text-align: left;
@@ -45,12 +130,11 @@
   font-weight: bold;
 }
 
-/* VIDEO SECTION */
 .video-card {
   position: relative;
   width: 100%;
   max-width: 450px;
-  aspect-ratio: 1 / 1; /* Keeps it a perfect square automatically */
+  aspect-ratio: 1 / 1;
   border-radius: 30px;
   overflow: hidden;
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
@@ -63,25 +147,25 @@
   object-fit: cover;
 }
 
-/* RESPONSIVE MEDIA QUERIES */
+/* MOBILE: video on top, text below */
 @media (max-width: 900px) {
   .content-wrapper {
-    flex-direction: column;
-    gap: 40px;
+    flex-direction: column;  /* video first = top, text second = bottom */
+    gap: 32px;
+    align-items: center;
   }
 
   .written-content {
     text-align: center;
+    width: 100%;
+    order: 1;  /* text on top */
   }
 
-  .section-title {
-    font-size: 2rem;
-  }
-}
-
-@media (max-width: 600px) {
-  .planetary-data-section {
-    padding: 60px 16px;
+  .video-card {
+    order: 2;  /* video below */
+    max-width: 100%;
+    width: 100%;
+    border-radius: 20px;
   }
 
   .section-title {
@@ -90,5 +174,15 @@
 
   .section-subtitle {
     font-size: 1rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .planetary-data-section {
+    padding: 48px 16px;
+  }
+
+  .section-title {
+    font-size: 1.5rem;
   }
 }
