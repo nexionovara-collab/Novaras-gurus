@@ -64,6 +64,8 @@ function Footer() {
           </p>
           <p className="text-white/80 text-base md:text-lg leading-relaxed mt-1">
             Riskiyat, Abiola, Zekeri, Harbor, Ibrahim, Nathan, Igbunuoghene
+            Built by Nexionovara, Group 5 Capstone Project with React, Fetch API, CSS and Collaborative Git Workflow. All rights reserved 
+            
           </p>
         </div>
 
@@ -76,9 +78,6 @@ function Footer() {
             <p className="text-white text-sm md:text-base font-medium leading-relaxed">
               ©2026 Designed by/Collaborators: Amaka & Ifeoma A, Riskiyat, Abiola, Zekeri, Harbor, Ibrahim, Nathan and Igbunuoghene.
             </p>
-            <p className="text-white text-sm md:text-base font-medium leading-relaxed">
-              Built by Nexionovara, Group 5 Capstone Project with Vite,  React, Fetch API, CSS and Collaborative Git Workflow. All rights reserved 
-            </p>
           </div>
 
           <a
@@ -89,6 +88,9 @@ function Footer() {
           >
             TSAcademy
           </a>
+          <p className="text-white text-sm md:text-base font-medium leading-relaxed">
+              https://novaras-gurus.vercel.app
+            </p>
         </div>
 
       </div>
