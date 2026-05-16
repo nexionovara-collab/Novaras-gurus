@@ -89,9 +89,15 @@ function Footer() {
           >
             TSAcademy
           </a>
-          <p className="text-white text-sm md:text-base font-medium leading-relaxed">
-              https://nexionovara-gurus.vercel.app
-            </p>
+          
+           <a
+            href="https://nexionovara-guru.vercel.app"
+            target="_blank"
+            rel="noreferrer"
+          className="text-white font-bold text-xl md:text-1xl hover:text-white/80 transition-colors no-underline"
+          >
+            Group 5 - Nexionovara
+          </a>
         </div>
 
       </div>
