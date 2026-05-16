@@ -29,15 +29,14 @@ const PlanetCard = ({ planet }) => {
       <div className="w-full aspect-square overflow-hidden">
         <img
           src={planet.image}
-          alt={planet.name}
+          alt={planet.planet}
           className="w-full h-full object-cover"
         />
       </div>
-
       {/* Info */}
       <figcaption className="w-full px-3 py-4 text-center">
         <p className="text-gray-900 font-semibold text-sm md:text-base mb-1">
-          {planet.name}
+          {planet.planet}
         </p>
         <p className="text-gray-500 text-xs md:text-sm leading-snug">
           Distance
@@ -53,5 +52,4 @@ const PlanetCard = ({ planet }) => {
     </figure>
   );
 };
-
 export default PlanetCard;

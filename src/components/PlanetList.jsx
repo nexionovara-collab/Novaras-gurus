@@ -78,7 +78,7 @@ const PlanetList = () => {
   }
 
   return (
-    <section className="w-full bg-white px-4 py-14 md:px-8 lg:px-16">
+    <section id="planets" className="w-full bg-white px-4 py-14 md:px-8 lg:px-16">
       {/* Header */}
       <div className="max-w-3xl mx-auto text-center mb-10 px-2">
         <h2 className="text-[#1d4fb8] text-2xl md:text-4xl font-bold mb-4">
