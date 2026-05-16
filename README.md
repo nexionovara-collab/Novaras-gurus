@@ -17,4 +17,4 @@ A collaborative React web application built for the TS Academy Capstone. This pr
 3. Run `npm run dev`
 
 ## Live Link
-* https://nexionovara-gurus.vercel.app
+* https://nexionovara-guru.vercel.app
