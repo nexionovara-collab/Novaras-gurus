@@ -49,7 +49,7 @@ import './PlanetaryDataSection.css';
 
 const PlanetaryDataSection = () => {
   return (
-    <section className="planetary-data-section">
+    <section id='data' className="planetary-data-section">
       <div className="section-container">
         <div className="content-wrapper">
 
