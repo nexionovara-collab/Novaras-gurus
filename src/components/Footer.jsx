@@ -63,7 +63,8 @@ function Footer() {
             First Name of Group Members are:
           </p>
           <p className="text-white/80 text-base md:text-lg leading-relaxed mt-1">
-            Riskiyat, Abiola, Zekeri, Harbor, Ibrahim, Nathan, Igbunuoghene
+            Riskiyat, Abiola, Zekeri, Harbor, Ibrahim, Nathan, Igbunuoghene.
+            
             Built by Nexionovara, Group 5 Capstone Project with React, Fetch API, CSS and Collaborative Git Workflow. All rights reserved 
             
           </p>
@@ -89,7 +90,7 @@ function Footer() {
             TSAcademy
           </a>
           <p className="text-white text-sm md:text-base font-medium leading-relaxed">
-              https://novaras-gurus.vercel.app
+              https://nexionovara-gurus.vercel.app
             </p>
         </div>
 
