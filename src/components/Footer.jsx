@@ -91,7 +91,7 @@ function Footer() {
           </a>
           
            <a
-            href="https://nexionovara-guru.vercel.app"
+            href="https://nexionovara-guruss.vercel.app"
             target="_blank"
             rel="noreferrer"
           className="text-white font-bold text-xl md:text-1xl hover:text-white/80 transition-colors no-underline"
