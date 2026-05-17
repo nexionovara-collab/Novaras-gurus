@@ -70,6 +70,7 @@ const ContactForm = () => {
       setErrors({});
     } catch  {
       setSuccessMessage("Form submitted successfully!");
+      setTimeout(() => setSuccessMessage(""), 5000);
     }
   };
 
