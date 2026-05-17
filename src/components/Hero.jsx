@@ -52,7 +52,7 @@ function Hero() {
           {/* Buttons */}
           <div className="flex flex-row items-center justify-center gap-3 lg:justify-start w-full">
             <a
-              href="#data"
+              href="#planets"
               className="inline-flex items-center justify-center px-5 py-3 rounded-[6px] font-sans text-[14px] font-medium text-white no-underline whitespace-nowrap bg-[#1a5dd4] border-2 border-[#1a5dd4] transition-all duration-200 hover:bg-[#1650b8] hover:border-[#1650b8] active:scale-95"
             >
               Explore the Data

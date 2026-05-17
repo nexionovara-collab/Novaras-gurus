@@ -23,9 +23,9 @@ const Navbar = () => {
           aria-label="Main navigation"
         >
           <a href="#home">Home</a>
-          <a href="#data">Solar System</a>
-          <a href="#planets">Planets</a>
-          <a href="#facts">Data</a>
+          {/* <a href="#data">Solar System</a> */}
+          <a href="#planets">Data</a>
+          <a href="#facts">Fact</a>
           <a href="#contact">Contact</a>
         </nav>
 
